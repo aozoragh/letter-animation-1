@@ -1,38 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.text-container {
+  animation-name: MovingAction;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.text {
+  font-family: "Titan One";font-style: normal;
+  font-weight: 400;
+  font-size: 138px;
+  color: rgb(255, 219, 82);
+  text-shadow: 2px 2px 4px #000000;
+
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+.text:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes titleHoverAnimation {
+  40% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg)
   }
+
+  50% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg)
+  }
+
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95)
+  }
+
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg)
+  }
+
   to {
-    transform: rotate(360deg);
+    transform: perspective(400px)
+  }
+}
+
+@keyframes MovingAction {
+  0% {
+    transform: translateY(0px)
+  }
+
+  50% {
+    transform: translateY(-10px)
+  }
+
+  100% {
+    transform: translateY(0px)
   }
 }

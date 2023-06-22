@@ -5,9 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(153, 235, 255)
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: "Titan One";
+  /*Can be any text*/
+
+  src: local("TitanOne-Regular"),
+    url("../src/assets/TitanOne-Regular.ttf") format("truetype");
 }
